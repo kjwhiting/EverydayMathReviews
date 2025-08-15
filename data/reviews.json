@@ -1,0 +1,553 @@
+{
+  "meta": {
+    "version": "1.1.0",
+    "generated": "2025-08-15",
+    "domains": ["games", "movies", "sewing", "music", "art"]
+  },
+  "reviews": [
+    {
+      "title": "Tandis",
+      "domain": "games",
+      "link": "https://example.com/tandis",
+      "overall_rating": 3,
+      "part_one_informal": {
+        "expressive_mathematics_rating": 3,
+        "mathematical_intuition_development": 4,
+        "noticeable_math": 2,
+        "accessibility": 4,
+        "overall": 3
+      },
+      "part_two_formal": {
+        "formal_mathematics_exposure": 2,
+        "rigor_rating": 2,
+        "mathematical_systems": 3,
+        "overall": 2
+      },
+      "part_three_transferability": {
+        "breadth_of_application": 4,
+        "ease_of_transfer": 4,
+        "math_depth": 3,
+        "overall": 4
+      },
+      "required_math_background": {
+        "counting": true,
+        "arithmetic": true,
+        "algebra": false,
+        "geometry": false,
+        "statistics_probability": false,
+        "proofs": false,
+        "trigonometry": false,
+        "calculus": false,
+        "data_representation": false,
+        "measurement_units": true,
+        "specialized_math": false,
+        "advanced_concepts": false
+      },
+      "concepts_that_show_up": {
+        "counting": true,
+        "arithmetic": true,
+        "algebra": false,
+        "geometry": true,
+        "statistics_probability": false,
+        "proofs": false,
+        "trigonometry": false,
+        "calculus": false,
+        "data_representation": true,
+        "measurement_units": true,
+        "specialized_math": false,
+        "advanced_concepts": false
+      },
+      "notes": "Dummy review for layout testing. Short, plain-language note describing what a reader should expect from this review. Max 270 characters to preserve visual rhythm and avoid dense blocks."
+    },
+    {
+      "title": "Prime Paths",
+      "domain": "games",
+      "link": "https://example.com/prime-paths",
+      "overall_rating": 4,
+      "part_one_informal": {
+        "expressive_mathematics_rating": 4,
+        "mathematical_intuition_development": 4,
+        "noticeable_math": 3,
+        "accessibility": 3,
+        "overall": 4
+      },
+      "part_two_formal": {
+        "formal_mathematics_exposure": 3,
+        "rigor_rating": 3,
+        "mathematical_systems": 3,
+        "overall": 3
+      },
+      "part_three_transferability": {
+        "breadth_of_application": 4,
+        "ease_of_transfer": 3,
+        "math_depth": 4,
+        "overall": 4
+      },
+      "required_math_background": {
+        "counting": true,
+        "arithmetic": true,
+        "algebra": false,
+        "geometry": false,
+        "statistics_probability": false,
+        "proofs": false,
+        "trigonometry": false,
+        "calculus": false,
+        "data_representation": false,
+        "measurement_units": false,
+        "specialized_math": false,
+        "advanced_concepts": false
+      },
+      "concepts_that_show_up": {
+        "counting": true,
+        "arithmetic": true,
+        "algebra": false,
+        "geometry": false,
+        "statistics_probability": false,
+        "proofs": false,
+        "trigonometry": false,
+        "calculus": false,
+        "data_representation": true,
+        "measurement_units": true,
+        "specialized_math": false,
+        "advanced_concepts": false
+      },
+      "notes": "A card-driven puzzle tracing prime-number routes; arithmetic emerges through constraints and tradeoffs. Math is visible yet approachable, with room for strategy and pattern discovery."
+    },
+
+    {
+      "title": "Heist Probabilities",
+      "domain": "movies",
+      "link": "https://example.com/heist-probabilities",
+      "overall_rating": 3,
+      "part_one_informal": {
+        "expressive_mathematics_rating": 3,
+        "mathematical_intuition_development": 3,
+        "noticeable_math": 3,
+        "accessibility": 4,
+        "overall": 3
+      },
+      "part_two_formal": {
+        "formal_mathematics_exposure": 2,
+        "rigor_rating": 3,
+        "mathematical_systems": 3,
+        "overall": 3
+      },
+      "part_three_transferability": {
+        "breadth_of_application": 4,
+        "ease_of_transfer": 3,
+        "math_depth": 3,
+        "overall": 3
+      },
+      "required_math_background": {
+        "counting": true,
+        "arithmetic": true,
+        "algebra": false,
+        "geometry": false,
+        "statistics_probability": false,
+        "proofs": false,
+        "trigonometry": false,
+        "calculus": false,
+        "data_representation": false,
+        "measurement_units": true,
+        "specialized_math": false,
+        "advanced_concepts": false
+      },
+      "concepts_that_show_up": {
+        "counting": true,
+        "arithmetic": true,
+        "algebra": false,
+        "geometry": false,
+        "statistics_probability": true,
+        "proofs": false,
+        "trigonometry": false,
+        "calculus": false,
+        "data_representation": true,
+        "measurement_units": true,
+        "specialized_math": false,
+        "advanced_concepts": false
+      },
+      "notes": "Analyzes caper set-pieces through odds, branching plans, and failure trees. Probability talk stays informal while inviting back-of-the-envelope reasoning about risk, time, and resources."
+    },
+    {
+      "title": "Editing Rhythms",
+      "domain": "movies",
+      "link": "https://example.com/editing-rhythms",
+      "overall_rating": 4,
+      "part_one_informal": {
+        "expressive_mathematics_rating": 4,
+        "mathematical_intuition_development": 4,
+        "noticeable_math": 3,
+        "accessibility": 4,
+        "overall": 4
+      },
+      "part_two_formal": {
+        "formal_mathematics_exposure": 3,
+        "rigor_rating": 3,
+        "mathematical_systems": 3,
+        "overall": 3
+      },
+      "part_three_transferability": {
+        "breadth_of_application": 4,
+        "ease_of_transfer": 4,
+        "math_depth": 3,
+        "overall": 4
+      },
+      "required_math_background": {
+        "counting": true,
+        "arithmetic": true,
+        "algebra": false,
+        "geometry": false,
+        "statistics_probability": false,
+        "proofs": false,
+        "trigonometry": false,
+        "calculus": false,
+        "data_representation": false,
+        "measurement_units": true,
+        "specialized_math": false,
+        "advanced_concepts": false
+      },
+      "concepts_that_show_up": {
+        "counting": true,
+        "arithmetic": true,
+        "algebra": false,
+        "geometry": false,
+        "statistics_probability": false,
+        "proofs": false,
+        "trigonometry": false,
+        "calculus": false,
+        "data_representation": true,
+        "measurement_units": true,
+        "specialized_math": false,
+        "advanced_concepts": false
+      },
+      "notes": "Cuts, beats, and scene pacing framed as ratios and periodic structure. Viewers notice metrical regularity without formal theory, making rhythm math intuitive and transferable to music."
+    },
+
+    {
+      "title": "Spiral Quilting Basics",
+      "domain": "sewing",
+      "link": "https://example.com/spiral-quilting",
+      "overall_rating": 3,
+      "part_one_informal": {
+        "expressive_mathematics_rating": 4,
+        "mathematical_intuition_development": 4,
+        "noticeable_math": 3,
+        "accessibility": 4,
+        "overall": 4
+      },
+      "part_two_formal": {
+        "formal_mathematics_exposure": 2,
+        "rigor_rating": 2,
+        "mathematical_systems": 2,
+        "overall": 2
+      },
+      "part_three_transferability": {
+        "breadth_of_application": 4,
+        "ease_of_transfer": 4,
+        "math_depth": 3,
+        "overall": 4
+      },
+      "required_math_background": {
+        "counting": true,
+        "arithmetic": true,
+        "algebra": false,
+        "geometry": false,
+        "statistics_probability": false,
+        "proofs": false,
+        "trigonometry": false,
+        "calculus": false,
+        "data_representation": false,
+        "measurement_units": true,
+        "specialized_math": false,
+        "advanced_concepts": false
+      },
+      "concepts_that_show_up": {
+        "counting": true,
+        "arithmetic": true,
+        "algebra": false,
+        "geometry": true,
+        "statistics_probability": false,
+        "proofs": false,
+        "trigonometry": false,
+        "calculus": false,
+        "data_representation": false,
+        "measurement_units": true,
+        "specialized_math": false,
+        "advanced_concepts": false
+      },
+      "notes": "Spiral growth introduces iteration, angle consistency, and measurement discipline. Geometry appears informally via turn counts and spacing rather than proofs."
+    },
+    {
+      "title": "Pattern Drafting 101",
+      "domain": "sewing",
+      "link": "https://example.com/pattern-drafting-101",
+      "overall_rating": 3,
+      "part_one_informal": {
+        "expressive_mathematics_rating": 3,
+        "mathematical_intuition_development": 4,
+        "noticeable_math": 3,
+        "accessibility": 3,
+        "overall": 3
+      },
+      "part_two_formal": {
+        "formal_mathematics_exposure": 3,
+        "rigor_rating": 3,
+        "mathematical_systems": 3,
+        "overall": 3
+      },
+      "part_three_transferability": {
+        "breadth_of_application": 3,
+        "ease_of_transfer": 3,
+        "math_depth": 3,
+        "overall": 3
+      },
+      "required_math_background": {
+        "counting": true,
+        "arithmetic": true,
+        "algebra": false,
+        "geometry": true,
+        "statistics_probability": false,
+        "proofs": false,
+        "trigonometry": false,
+        "calculus": false,
+        "data_representation": false,
+        "measurement_units": true,
+        "specialized_math": false,
+        "advanced_concepts": false
+      },
+      "concepts_that_show_up": {
+        "counting": true,
+        "arithmetic": true,
+        "algebra": false,
+        "geometry": true,
+        "statistics_probability": false,
+        "proofs": false,
+        "trigonometry": false,
+        "calculus": false,
+        "data_representation": false,
+        "measurement_units": true,
+        "specialized_math": false,
+        "advanced_concepts": false
+      },
+      "notes": "Basic block drafting anchors measurements to geometry—seams, darts, and ease—translating body data into repeatable shapes. Formal vocabulary appears but remains light."
+    },
+
+    {
+      "title": "Rhythm Etudes Vol. 1",
+      "domain": "music",
+      "link": "https://example.com/rhythm-etudes",
+      "overall_rating": 3,
+      "part_one_informal": {
+        "expressive_mathematics_rating": 3,
+        "mathematical_intuition_development": 3,
+        "noticeable_math": 3,
+        "accessibility": 4,
+        "overall": 3
+      },
+      "part_two_formal": {
+        "formal_mathematics_exposure": 3,
+        "rigor_rating": 3,
+        "mathematical_systems": 2,
+        "overall": 3
+      },
+      "part_three_transferability": {
+        "breadth_of_application": 3,
+        "ease_of_transfer": 3,
+        "math_depth": 3,
+        "overall": 3
+      },
+      "required_math_background": {
+        "counting": true,
+        "arithmetic": true,
+        "algebra": false,
+        "geometry": false,
+        "statistics_probability": false,
+        "proofs": false,
+        "trigonometry": false,
+        "calculus": false,
+        "data_representation": false,
+        "measurement_units": true,
+        "specialized_math": false,
+        "advanced_concepts": false
+      },
+      "concepts_that_show_up": {
+        "counting": true,
+        "arithmetic": true,
+        "algebra": false,
+        "geometry": false,
+        "statistics_probability": false,
+        "proofs": false,
+        "trigonometry": false,
+        "calculus": false,
+        "data_representation": false,
+        "measurement_units": true,
+        "specialized_math": false,
+        "advanced_concepts": false
+      },
+      "notes": "Progressive counting drills cultivate stable meter and subdivision. Modular thinking shows up in repeatable units and practice patterns."
+    },
+    {
+      "title": "Harmonic Progressions Basics",
+      "domain": "music",
+      "link": "https://example.com/harmonic-progressions",
+      "overall_rating": 3,
+      "part_one_informal": {
+        "expressive_mathematics_rating": 3,
+        "mathematical_intuition_development": 3,
+        "noticeable_math": 2,
+        "accessibility": 3,
+        "overall": 3
+      },
+      "part_two_formal": {
+        "formal_mathematics_exposure": 3,
+        "rigor_rating": 3,
+        "mathematical_systems": 3,
+        "overall": 3
+      },
+      "part_three_transferability": {
+        "breadth_of_application": 4,
+        "ease_of_transfer": 3,
+        "math_depth": 3,
+        "overall": 3
+      },
+      "required_math_background": {
+        "counting": true,
+        "arithmetic": true,
+        "algebra": false,
+        "geometry": false,
+        "statistics_probability": false,
+        "proofs": false,
+        "trigonometry": false,
+        "calculus": false,
+        "data_representation": false,
+        "measurement_units": false,
+        "specialized_math": false,
+        "advanced_concepts": false
+      },
+      "concepts_that_show_up": {
+        "counting": true,
+        "arithmetic": true,
+        "algebra": false,
+        "geometry": false,
+        "statistics_probability": false,
+        "proofs": false,
+        "trigonometry": false,
+        "calculus": false,
+        "data_representation": false,
+        "measurement_units": true,
+        "specialized_math": false,
+        "advanced_concepts": false
+      },
+      "notes": "Functional harmony introduces pattern recognition and simple relationships between chords (I–V–vi–IV), with accessible ear training and transfer to songwriting."
+    },
+
+    {
+      "title": "Perspective Sketch Warmups",
+      "domain": "art",
+      "link": "https://example.com/perspective-warmups",
+      "overall_rating": 3,
+      "part_one_informal": {
+        "expressive_mathematics_rating": 4,
+        "mathematical_intuition_development": 4,
+        "noticeable_math": 2,
+        "accessibility": 4,
+        "overall": 4
+      },
+      "part_two_formal": {
+        "formal_mathematics_exposure": 2,
+        "rigor_rating": 2,
+        "mathematical_systems": 3,
+        "overall": 2
+      },
+      "part_three_transferability": {
+        "breadth_of_application": 4,
+        "ease_of_transfer": 3,
+        "math_depth": 4,
+        "overall": 4
+      },
+      "required_math_background": {
+        "counting": true,
+        "arithmetic": false,
+        "algebra": false,
+        "geometry": true,
+        "statistics_probability": false,
+        "proofs": false,
+        "trigonometry": false,
+        "calculus": false,
+        "data_representation": false,
+        "measurement_units": true,
+        "specialized_math": false,
+        "advanced_concepts": false
+      },
+      "concepts_that_show_up": {
+        "counting": true,
+        "arithmetic": false,
+        "algebra": false,
+        "geometry": true,
+        "statistics_probability": false,
+        "proofs": false,
+        "trigonometry": false,
+        "calculus": false,
+        "data_representation": true,
+        "measurement_units": true,
+        "specialized_math": false,
+        "advanced_concepts": false
+      },
+      "notes": "One- and two-point drills emphasize horizon, vanishing lines, and proportional scaling. Strong geometric intuition develops without heavy formalism."
+    },
+    {
+      "title": "Tessellation Workshop",
+      "domain": "art",
+      "link": "https://example.com/tessellation-workshop",
+      "overall_rating": 4,
+      "part_one_informal": {
+        "expressive_mathematics_rating": 4,
+        "mathematical_intuition_development": 4,
+        "noticeable_math": 3,
+        "accessibility": 3,
+        "overall": 4
+      },
+      "part_two_formal": {
+        "formal_mathematics_exposure": 3,
+        "rigor_rating": 3,
+        "mathematical_systems": 3,
+        "overall": 3
+      },
+      "part_three_transferability": {
+        "breadth_of_application": 4,
+        "ease_of_transfer": 3,
+        "math_depth": 4,
+        "overall": 4
+      },
+      "required_math_background": {
+        "counting": true,
+        "arithmetic": true,
+        "algebra": false,
+        "geometry": true,
+        "statistics_probability": false,
+        "proofs": false,
+        "trigonometry": false,
+        "calculus": false,
+        "data_representation": false,
+        "measurement_units": true,
+        "specialized_math": false,
+        "advanced_concepts": false
+      },
+      "concepts_that_show_up": {
+        "counting": true,
+        "arithmetic": true,
+        "algebra": false,
+        "geometry": true,
+        "statistics_probability": false,
+        "proofs": false,
+        "trigonometry": false,
+        "calculus": false,
+        "data_representation": true,
+        "measurement_units": true,
+        "specialized_math": false,
+        "advanced_concepts": false
+      },
+      "notes": "Hands-on tiling activities surface symmetry, transformations, and repeat units. Formal vocabulary can be introduced, yet pattern play carries the learning."
+    }
+  ]
+}

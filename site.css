@@ -1,0 +1,480 @@
+/* =====================================================================
+   EverydayMathReviews — site.css (Google HTML/CSS Guide aligned)
+   Sections:
+     01) Design tokens
+     02) Base & utilities
+     03) Global background grid
+     04) Header (gradient “Math”, link-style CTA with hover sweep)
+     05) Hero: quote panel + local grid (shorter) + quote typographic tweaks
+     06) Inline context card inside hero (shadowbox + dashed border)
+     07) Third panel inside hero (matched to second; solid circle w/ dashed outline)
+     08) Footer
+     09) Media queries & reduced motion
+   ===================================================================== */
+
+
+/* =========================
+   01) DESIGN TOKENS
+   ========================= */
+:root {
+  /* Palette */
+  --violet-900: #160a2a;
+  --violet-875: #1a0e33;
+  --violet-850: #1c0d38;
+  --violet-820: #201042;
+  --violet-800: #231044;
+
+  --ink: #f5f7ff;
+  --muted: #c7bee8;
+  --border: #3b2b68;
+
+  /* Accents */
+  --magenta: #b045ff;
+  --green: #34f86a;
+  --aqua: #18d6c0;
+
+  /* Typography */
+  --font-sans: system-ui, "Segoe UI", Roboto, "Noto Sans", Arial, sans-serif;
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", serif;
+
+  /* Rhythm */
+  --fs-body: 18px;
+  --lh: 1.65;
+  --max: 72ch;
+
+  /* Spacing */
+  --s1: 4px;
+  --s2: 8px;
+  --s3: 12px;
+  --s4: 16px;
+  --s5: 24px;
+  --s6: 32px;
+  --s7: 48px;
+  --s8: 64px;
+  --s9: 96px;
+
+  /* Shape & focus */
+  --radius: 16px;
+  --ring: 3px;
+
+  /* Breakpoints */
+  --bp-md: 1000px;
+  --bp-sm: 720px;
+}
+
+
+/* =========================
+   02) BASE & UTILITIES
+   ========================= */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  background: var(--violet-900);
+  color: var(--ink);
+  font-family: var(--font-sans);
+}
+
+body {
+  margin: 0;
+  font-size: var(--fs-body);
+  line-height: var(--lh);
+}
+
+a {
+  color: var(--green);
+  text-decoration: none;
+}
+
+a:hover {
+  filter: saturate(1.05);
+}
+
+p,
+ul,
+ol,
+dl {
+  max-width: var(--max);
+}
+
+ul,
+ol {
+  padding-inline-start: 1.25rem;
+}
+
+h1,
+h2 {
+  font-family: var(--font-serif);
+  letter-spacing: 0.2px;
+}
+
+h1 {
+  font-size: clamp(34px, 4.2vw, 56px);
+  line-height: 1.12;
+  margin: 0 0 var(--s4);
+}
+
+h2 {
+  font-size: clamp(24px, 2.8vw, 36px);
+  line-height: 1.2;
+  margin: 0 0 var(--s4);
+}
+
+.lede {
+  font-size: clamp(18px, 2vw, 22px);
+  color: #e9e5ff;
+}
+
+.wrap {
+  max-width: 100vw;
+  margin-inline: auto;
+  padding: var(--s6) var(--s5);
+}
+
+:focus-visible {
+  outline: var(--ring) solid var(--aqua);
+  outline-offset: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-link:focus {
+  position: fixed;
+  left: 16px;
+  top: 16px;
+  background: #0c1730;
+  padding: 8px 10px;
+  border-radius: 10px;
+  z-index: 1000;
+}
+
+
+/* =========================
+   03) GLOBAL BACKGROUND GRID
+   ========================= */
+.page-grid {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.18;
+  background:
+    repeating-linear-gradient(0deg, transparent 0 48px, rgba(255, 255, 255, 0.12) 48px 50px),
+    repeating-linear-gradient(90deg, transparent 0 48px, rgba(255, 255, 255, 0.12) 48px 50px);
+}
+
+/* keep main layers above the grid */
+.site-header,
+main,
+.site-footer {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* =========================
+   04) HEADER
+   - Gradient “Math”
+   - Link-style CTA with hover sweep
+   ========================= */
+.site-header {
+  border-bottom: 1px solid var(--border);
+  background: linear-gradient(180deg, var(--violet-820) 0%, var(--violet-900) 100%);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s5);
+}
+
+.site-name {
+  display: flex;
+  align-items: baseline;
+  font-weight: 900;
+  font-size: 22px;
+  letter-spacing: 0.3px;
+  color: var(--ink);
+  padding: 10px 0;
+}
+
+.site-name-part {
+  color: var(--ink);
+}
+
+/* solid fallback */
+.site-name-accent {
+  color: var(--magenta);
+}
+
+/* progressive enhancement: gradient text where supported */
+@supports (-webkit-background-clip: text) or (background-clip: text) {
+  .site-name-accent {
+    background: linear-gradient(-31deg, var(--green), var(--magenta));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+/* Header CTA as a link — gradient sweep only on hover, no background block at rest */
+.header-cta-link {
+  color: var(--green);
+  font-weight: 700;
+  font-size: 0.95rem;
+  line-height: 1.2;
+  text-decoration: none;
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
+/* prep gradient but keep it hidden until hover by not making text transparent */
+@supports (-webkit-background-clip: text) or (background-clip: text) {
+  .header-cta-link {
+    background-image: linear-gradient(-45deg, var(--magenta), var(--green));
+    background-size: 200% 100%;
+    background-position: 0% 50%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    transition: background-position 0.6s ease, color 0.2s ease;
+    color: var(--green); /* opaque at rest */
+  }
+
+  .header-cta-link:hover,
+  .header-cta-link:focus-visible {
+    color: transparent;          /* reveal gradient within text */
+    background-position: 100% 50%;
+    text-decoration: none;
+  }
+}
+
+
+/* =========================
+   05) HERO: QUOTE PANEL + LOCAL GRID (SHORTER)
+   ========================= */
+.hero-quote {
+  position: relative; /* contains .hero-grid */
+  border-top: 3px dashed var(--border);
+  border-bottom: 3px dashed var(--border);
+  background: linear-gradient(180deg, var(--violet-820) 0%, var(--violet-850) 80%);
+}
+
+.hero-inner {
+  padding-top: var(--s6);
+  padding-bottom: var(--s6);
+  position: relative;
+  z-index: 2; /* above local grid */
+}
+
+/* local grid behind the quote panel (denser than page grid) */
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.22;
+  background:
+    repeating-linear-gradient(0deg, transparent 0 40px, rgba(255, 255, 255, 0.2) 40px 43px),
+    repeating-linear-gradient(90deg, transparent 0 40px, rgba(255, 255, 255, 0.2) 40px 43px);
+}
+
+/* Quote typographic tweaks (latest values) */
+.quote-block {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: end;
+}
+
+.quote-display {
+  font-weight: 500;
+  margin: 0;
+}
+
+.quote-display strong {
+  color: var(--green);
+  font-weight: 650;
+}
+
+.quote-cite {
+  font-weight: 600;
+  color: var(--magenta);
+  white-space: nowrap;
+  align-self: center;
+  margin-right: -1.25em;
+  margin-top: -1.25em;
+}
+
+
+/* =========================
+   06) INLINE CONTEXT CARD (INSIDE HERO)
+   ========================= */
+.context-inline {
+  display: block;
+  max-width: min(62ch, 100%);
+  margin: var(--s5) 0 0 auto;   /* right-justify within hero */
+  padding: var(--s5);
+  text-align: right;
+
+  background: #11122c;
+  border: 3px dashed var(--magenta);
+  border-radius: var(--radius);
+
+  box-shadow:
+    0 12px 36px rgba(0, 0, 0, 0.35),
+    0 0 0 1px rgba(255, 255, 255, 0.04) inset;
+}
+
+.context-inline-title {
+  margin: 0 0 var(--s2);
+  color: var(--magenta);
+  font-family: var(--font-serif);
+  font-size: clamp(22px, 2.5vw, 28px);
+  line-height: 1.2;
+}
+
+.context-inline-lede {
+  margin: 0;
+  color: #e9e5ff;
+  max-width: 60ch;
+}
+
+
+/* =========================
+   07) THIRD PANEL INSIDE HERO (MATCHED TO SECOND)
+   ========================= */
+.insight-inline {
+  position: relative;
+  display: block;
+  max-width: min(62ch, 100%);
+  margin-top: -3em;
+  padding: var(--s5);
+  text-align: left; 
+  background: #11122c;
+  border: 3px dashed var(--magenta);
+  border-radius: var(--radius);
+
+  box-shadow:
+    0 12px 36px rgba(0, 0, 0, 0.35),
+    0 0 0 1px rgba(255, 255, 255, 0.04) inset;
+  z-index: -2;
+}
+
+.insight-title {
+  margin-top: 2em;
+  color: var(--magenta);         /* match second card's title color */
+  font-family: var(--font-serif);
+  font-size: clamp(22px, 2.5vw, 28px);
+  line-height: 1.2;
+}
+
+.insight-copy {
+  margin: 0;
+  color: #e9e5ff;
+  max-width: 60ch;
+}
+
+/* solid circle with dashed outline, using SAME background as the cards */
+.insight-circle {
+  position: absolute;
+  right: -256px;
+  bottom: -128px;
+  width: 512px;
+  height: 512px;
+  border-radius: 50%;
+  background: #11122c;          /* same bg as both panels */
+  border: 3px dashed var(--magenta);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  opacity: 0.55;
+  pointer-events: none;
+  z-index: 10;
+}
+
+
+/* =========================
+   08) FOOTER
+   ========================= */
+.site-footer {
+  background: #0f1226;
+  border-top: 1px solid var(--border);
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  gap: var(--s4);
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-ai a {
+  color: var(--green);
+}
+
+.footer-ai a:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================
+   09) MEDIA QUERIES & REDUCED MOTION
+   ========================= */
+@media (max-width: 1000px) {
+  .quote-block {
+    grid-template-columns: 1fr;
+  }
+  .quote-cite {
+    justify-self: end;
+  }
+}
+
+@media (max-width: 720px) {
+  .header-inner {
+    gap: var(--s3);
+  }
+  .site-name {
+    font-size: 20px;
+  }
+
+  /* both inline cards behave the same on small screens */
+  .context-inline,
+  .insight-inline {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
+    padding: var(--s5);
+  }
+
+  .insight-circle {
+    width: 96px;
+    height: 96px;
+    right: -8px;
+    bottom: -8px;
+    opacity: 0.9;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  /* keep classic underline for CTA on reduced motion */
+  .header-cta-link:hover,
+  .header-cta-link:focus-visible {
+    text-decoration: underline;
+  }
+}
