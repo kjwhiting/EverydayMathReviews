@@ -19,7 +19,9 @@
         <span class="site-name-part">Everyday</span>
         <span class="site-name-accent">Math</span>
         <span class="site-name-part">Reviews</span>
+        
       </div>
+      <span>(Proof of concept)</span>
       <a class="header-cta-link" href="reviews.html">Explore reviews</a>
     </div>
   </header>
@@ -54,6 +56,356 @@
         <!-- Local grid overlay for the quote panel -->
         <div class="hero-grid" aria-hidden="true"></div>
     </section>
+
+<!-- Banner section -->
+<section class="scorecard-banner" aria-labelledby="scorecard-banner-title">
+  <style>
+    .scorecard-banner {
+      margin: var(--s7) var(--s5) var(--s6);
+      padding: var(--s6);
+      background: #0f1226;
+      border: 3px dashed var(--aqua);
+      border-radius: var(--radius);
+      box-shadow:
+        0 12px 36px rgba(0,0,0,0.35),
+        0 0 0 1px rgba(255,255,255,0.04) inset;
+      text-align: center;
+    }
+    .scorecard-banner h2 {
+      margin: 0 0 var(--s3);
+      font-family: var(--font-serif);
+      color: var(--aqua);
+      font-size: clamp(22px, 2.5vw, 28px);
+      line-height: 1.2;
+    }
+    .scorecard-banner p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+  </style>
+  <h2 id="scorecard-banner-title">The Scorecard!</h2>
+  <p>
+    Below is an example scorecard with all the details —
+    what each category means and how it is scored.
+  </p>
+</section>
+
+
+
+    <section class="scorecard" aria-labelledby="scorecard-title">
+  <style>
+    /* Scoped to .scorecard only */
+    .scorecard {
+      margin: var(--s7) var(--s5);
+      padding: var(--s6);
+      background: #11122c;
+      border: 3px dashed var(--magenta);
+      border-radius: var(--radius);
+      box-shadow: 0 12px 36px rgba(0,0,0,0.35), 0 0 0 1px rgba(255,255,255,0.04) inset;
+    }
+    .scorecard h2 {
+      margin: 0 0 var(--s4);
+      color: var(--magenta);
+      font-family: var(--font-serif);
+      font-size: clamp(22px, 2.5vw, 28px);
+      line-height: 1.2;
+    }
+    .sc-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--s4);
+      padding: var(--s3) 0;
+      border-top: 1px solid var(--border);
+    }
+    .sc-row:first-of-type { border-top: 0; }
+    .sc-title { font-weight: 700; }
+    .sc-meter {
+      display: flex;
+      align-items: center;
+      gap: var(--s3);
+      min-width: 240px;
+    }
+    .sc-meter meter {
+      width: 180px;
+      height: 12px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 999px;
+    }
+    .sc-meter meter::-webkit-meter-bar { background: rgba(255,255,255,0.1); border-radius: 999px; }
+    .sc-meter meter::-webkit-meter-optimum-value { background: linear-gradient(90deg, var(--green), var(--magenta)); border-radius: 999px; }
+    .sc-badge-group { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: var(--s2) var(--s3); margin-top: var(--s3); }
+    .sc-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 10px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      font-size: 0.9rem;
+      background: rgba(255,255,255,0.03);
+    }
+    .sc-badge[data-active="true"] { border-color: var(--green); background: rgba(52,248,106,0.08); }
+    .sc-badge .dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: currentColor; opacity: 0.9;
+    }
+    .sc-note { margin: var(--s3) 0 0; color: var(--muted); font-size: 0.95rem; }
+    .sc-subtle { color: var(--muted); font-weight: 600; letter-spacing: 0.3px; }
+    .sc-grid {
+      grid-template-columns: 1fr;
+      gap: var(--s6);
+      margin-top: var(--s5);
+    }
+    .sc-card {
+      padding: var(--s5);
+      background: #0f1226;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+    .stars { letter-spacing: 2px; }
+    .stars [aria-hidden="true"] { color: var(--magenta); }
+    .sc-head {
+      display: flex; flex-wrap: wrap; gap: var(--s3); align-items: baseline; justify-content: space-between;
+      margin-bottom: var(--s4);
+    }
+    .sc-head h3 { margin: 0; font-family: var(--font-serif); }
+    .sc-head small { color: var(--muted); }
+    details.sc-details { margin-top: var(--s4); }
+    details.sc-details > summary { cursor: pointer; color: var(--green); font-weight: 600; }
+    @media (max-width: 720px) {
+      .scorecard { margin: var(--s6) var(--s5); padding: var(--s5); }
+      .sc-meter { min-width: 0; }
+      .sc-meter meter { width: 120px; }
+    }
+  </style>
+
+  <h2 id="scorecard-title">Mathematical Rigor Scale (Example Scorecard)</h2>
+
+  <!-- Header / Title & Overall -->
+  <div class="sc-row" role="group" aria-label="Game and overall rating">
+    <div>
+      <div class="sc-subtle">Game Title</div>
+      <div class="sc-title" aria-label="Game title">Tandis</div>
+    </div>
+    <div class="sc-meter" aria-label="Overall rating out of 5">
+      <div class="stars" aria-hidden="true">★★★★★</div>
+      <div><strong>5</strong>/5</div>
+    </div>
+  </div>
+
+  <!-- Required Math Background -->
+  <div class="sc-card" role="group" aria-labelledby="req-math-title">
+    <div class="sc-head">
+      <h3 id="req-math-title">Required Math Background to Play</h3>
+      <small>Checked topics indicate material a player will actively rely on.</small>
+    </div>
+    <div class="sc-badge-group">
+      <span class="sc-badge" data-active="false"><span class="dot"></span>Counting</span>
+      <span class="sc-badge" data-active="false"><span class="dot"></span>Arithmetic</span>
+      <span class="sc-badge" data-active="false"><span class="dot"></span>Algebra</span>
+      <span class="sc-badge" data-active="true"><span class="dot"></span>Geometry</span>
+
+      <span class="sc-badge" data-active="false"><span class="dot"></span>Statistics/Probability</span>
+      <span class="sc-badge" data-active="false"><span class="dot"></span>Proofs</span>
+      <span class="sc-badge" data-active="false"><span class="dot"></span>Trigonometry</span>
+      <span class="sc-badge" data-active="false"><span class="dot"></span>Calculus</span>
+
+      <span class="sc-badge" data-active="false"><span class="dot"></span>Data Representation</span>
+      <span class="sc-badge" data-active="true"><span class="dot"></span>Measurement &amp; Units</span>
+      <span class="sc-badge" data-active="false"><span class="dot"></span>Specialized Math</span>
+      <span class="sc-badge" data-active="false"><span class="dot"></span>Advanced Concepts</span>
+    </div>
+  </div>
+
+  <!-- Shows up but not required -->
+  <div class="sc-card" role="group" aria-labelledby="shows-up-title">
+    <div class="sc-head">
+      <h3 id="shows-up-title">Math Concepts That Show Up (Not Required)</h3>
+      <small>Topics people may encounter (informal or formal) but is not a required background for gameplay.</small>
+    </div>
+    <div class="sc-badge-group">
+      <span class="sc-badge" data-active="false"><span class="dot"></span>Counting</span>
+      <span class="sc-badge" data-active="false"><span class="dot"></span>Arithmetic</span>
+      <span class="sc-badge" data-active="true"><span class="dot"></span>Algebra</span>
+      <span class="sc-badge" data-active="true"><span class="dot"></span>Geometry</span>
+
+      <span class="sc-badge" data-active="false"><span class="dot"></span>Statistics/Probability</span>
+      <span class="sc-badge" data-active="true"><span class="dot"></span>Proofs</span>
+      <span class="sc-badge" data-active="true"><span class="dot"></span>Trigonometry</span>
+      <span class="sc-badge" data-active="true"><span class="dot"></span>Calculus</span>
+
+      <span class="sc-badge" data-active="false"><span class="dot"></span>Data Representation</span>
+      <span class="sc-badge" data-active="true"><span class="dot"></span>Measurement &amp; Units</span>
+      <span class="sc-badge" data-active="true"><span class="dot"></span>Specialized Math</span>
+      <span class="sc-badge" data-active="true"><span class="dot"></span>Advanced Concepts</span>
+    </div>
+  </div>
+
+  <!-- Three Parts -->
+  <div class="sc-grid">
+    <!-- Part One -->
+    <div class="sc-card" role="group" aria-labelledby="part1-title">
+      <div class="sc-head">
+        <h3 id="part1-title">Part One — Informal Mathematics (Problem-Solving &amp; Pattern Recognition)</h3>
+      </div>
+
+      <div class="sc-row">
+        <div class="sc-title">Expressive Mathematics Rating</div>
+        <div class="sc-meter" aria-label="Expressive Mathematics Rating 5 out of 5">
+          <meter min="0" max="5" value="5">5</meter><div><strong>5</strong>/5</div>
+        </div>
+      </div>
+      <p class="sc-note">
+        <strong>1 star:</strong> Gameplay requires little to no mathematical intuition.
+        <br><strong>5 stars:</strong> Gameplay heavily depends on mathematical thinking, pattern recognition, and creative problem-solving.
+      </p>
+
+      <div class="sc-row">
+        <div class="sc-title">Mathematical Intuition Development</div>
+        <div class="sc-meter" aria-label="Mathematical Intuition Development 5 out of 5">
+          <meter min="0" max="5" value="5">5</meter><div><strong>5</strong>/5</div>
+        </div>
+      </div>
+      <p class="sc-note">
+        <strong>1 star:</strong> Only casual estimation or basic counting; strategies don’t rely on patterns.
+        <br><strong>5 stars:</strong> Frequent pattern recognition, decomposition, sequencing, and strategic reasoning.
+      </p>
+
+      <div class="sc-row">
+        <div class="sc-title">Noticeable Math</div>
+        <div class="sc-meter" aria-label="Noticeable Math 5 out of 5">
+          <meter min="0" max="5" value="5">5</meter><div><strong>5</strong>/5</div>
+        </div>
+      </div>
+      <p class="sc-note">
+        <strong>1 star:</strong> Math is hidden; you have to dig for it.
+        <br><strong>5 stars:</strong> Math is explicit and integral to gameplay.
+      </p>
+
+      <div class="sc-row">
+        <div class="sc-title">Accessibility</div>
+        <div class="sc-meter" aria-label="Accessibility 5 out of 5">
+          <meter min="0" max="5" value="5">5</meter><div><strong>5</strong>/5</div>
+        </div>
+      </div>
+      <p class="sc-note">
+        <strong>1 star:</strong> Requires strong prior background; steep learning curve.
+        <br><strong>5 stars:</strong> Beginner-friendly with clear progression.
+      </p>
+
+      <div class="sc-row" aria-label="Informal overall rating">
+        <div class="sc-title">How much will this game strengthen problem-solving &amp; pattern recognition?</div>
+        <div class="sc-meter">
+          <div><strong>5</strong>/5</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Part Two -->
+    <div class="sc-card" role="group" aria-labelledby="part2-title">
+      <div class="sc-head">
+        <h3 id="part2-title">Part Two — Formal Mathematics (Educational Content)</h3>
+      </div>
+
+      <div class="sc-row">
+        <div class="sc-title">Formal Mathematics Exposure</div>
+        <div class="sc-meter" aria-label="Formal Mathematics Exposure 5 out of 5">
+          <meter min="0" max="5" value="5">5</meter><div><strong>5</strong>/5</div>
+        </div>
+      </div>
+      <p class="sc-note">
+        <strong>1 star:</strong> No explicit math; everything hidden in mechanics.
+        <br><strong>5 stars:</strong> Direct interaction with notation, definitions, and theorems integrated into core challenges.
+      </p>
+
+      <div class="sc-row">
+        <div class="sc-title">Rigor Rating</div>
+        <div class="sc-meter" aria-label="Rigor Rating 5 out of 5">
+          <meter min="0" max="5" value="5">5</meter><div><strong>5</strong>/5</div>
+        </div>
+      </div>
+      <p class="sc-note">
+        <strong>1 star:</strong> Math is optional, unclear, and estimation-based.
+        <br><strong>5 stars:</strong> Fully rigorous and precise.
+      </p>
+
+      <div class="sc-row">
+        <div class="sc-title">Mathematical Systems</div>
+        <div class="sc-meter" aria-label="Mathematical Systems 5 out of 5">
+          <meter min="0" max="5" value="5">5</meter><div><strong>5</strong>/5</div>
+        </div>
+      </div>
+      <p class="sc-note">
+        <strong>1 star:</strong> No system beyond simple counters/timers.
+        <br><strong>5 stars:</strong> Robust, precise systems mapping to formal concepts (geometry, physics, logic, combinatorics, etc.).
+      </p>
+
+      <div class="sc-row" aria-label="Formal overall rating">
+        <div class="sc-title">Will I learn rigorous mathematics by playing this game?</div>
+        <div class="sc-meter">
+          <div><strong>5</strong>/5</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Part Three -->
+    <div class="sc-card" role="group" aria-labelledby="part3-title">
+      <div class="sc-head">
+        <h3 id="part3-title">Part Three — Transferability</h3>
+      </div>
+
+      <div class="sc-row">
+        <div class="sc-title">Breadth of Application</div>
+        <div class="sc-meter" aria-label="Breadth of Application 5 out of 5">
+          <meter min="0" max="5" value="5">5</meter><div><strong>5</strong>/5</div>
+        </div>
+      </div>
+      <p class="sc-note">
+        <strong>1 star:</strong> Skills are specific to this game’s mechanics.
+        <br><strong>5 stars:</strong> Skills apply broadly to real-life and academic areas.
+      </p>
+
+      <div class="sc-row">
+        <div class="sc-title">Ease of Transfer</div>
+        <div class="sc-meter" aria-label="Ease of Transfer 4 out of 5">
+          <meter min="0" max="5" value="4">4</meter><div><strong>4</strong>/5</div>
+        </div>
+      </div>
+      <p class="sc-note">
+        <strong>1 star:</strong> Requires specialized knowledge to recognize connections.
+        <br><strong>5 stars:</strong> Connections are clear and intuitive without outside help.
+      </p>
+
+      <div class="sc-row">
+        <div class="sc-title">Math Depth</div>
+        <div class="sc-meter" aria-label="Math Depth 5 out of 5">
+          <meter min="0" max="5" value="5">5</meter><div><strong>5</strong>/5</div>
+        </div>
+      </div>
+      <p class="sc-note">
+        <strong>1 star:</strong> Only surface-level numbers/simple comparisons.
+        <br><strong>5 stars:</strong> Multi-step reasoning, interacting concepts, and strategic trade-offs.
+      </p>
+
+      <div class="sc-row" aria-label="Transferability overall rating">
+        <div class="sc-title">How transferable are the skills learned during gameplay?</div>
+        <div class="sc-meter">
+          <div><strong>4.67</strong>/5</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notes -->
+  <details class="sc-details">
+    <summary>Notes</summary>
+    <p class="sc-note">Use this example to calibrate future reviews. Scores shown reflect the provided example (“Tandis”) and can be adjusted per title.</p>
+  </details>
+</section>
+
+
 
   </main>
 
