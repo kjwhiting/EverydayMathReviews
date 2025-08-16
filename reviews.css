@@ -93,7 +93,9 @@
 
 .meta-row {
   display: flex;
-  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
   font-size: 0.7rem;      /* smaller than title */
   color: var(--muted);
 }
@@ -115,14 +117,21 @@
   text-decoration: none;
 }
 .review-link:hover { text-decoration: underline; }
-.review-link--sm { margin-left: auto; } /* pushes to right */
 
 
 /* =========================
    04) OVERALL ROW
    ========================= */
+
+.review-card-head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .review-card-body {
-  padding: 10px 5px;
+  padding: 0;
   display: flex;
   flex-direction: column;
   font-size: .75rem;
@@ -163,13 +172,18 @@
 .sub-metrics-vert {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  margin: 5px;
+  padding: 2px;
+  
+  border: 1px dashed var(--magenta);
+  border-radius: 12px;
 }
 
 .metric-row {
   display: flex;
   flex-direction: row; 
-  width: 100%;
+
   padding: 0 5px ;
 }
 
@@ -195,9 +209,26 @@
   color: var(--green);
   background: none;
   border: 0;
-  padding: 0;
+  padding-top: 10px;
   font-weight: 700;
   cursor: pointer;
+
 }
 .toggle-details:hover { text-decoration: underline; }
 
+.concepts{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 300px;
+  justify-content: space-around;
+  font-size: .8rem;
+  
+  padding:  0;
+  margin: 5px 0;
+}
+
+.concepts li{
+  list-style-type: none;
+  padding: 5px;
+}

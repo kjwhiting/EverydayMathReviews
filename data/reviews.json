@@ -29,34 +29,12 @@
         "math_depth": 3,
         "overall": 4
       },
-      "required_math_background": {
-        "counting": true,
-        "arithmetic": true,
-        "algebra": false,
-        "geometry": false,
-        "statistics_probability": false,
-        "proofs": false,
-        "trigonometry": false,
-        "calculus": false,
-        "data_representation": false,
-        "measurement_units": true,
-        "specialized_math": false,
-        "advanced_concepts": false
-      },
-      "concepts_that_show_up": {
-        "counting": true,
-        "arithmetic": true,
-        "algebra": false,
-        "geometry": true,
-        "statistics_probability": false,
-        "proofs": false,
-        "trigonometry": false,
-        "calculus": false,
-        "data_representation": true,
-        "measurement_units": true,
-        "specialized_math": false,
-        "advanced_concepts": false
-      },
+      "required_math_background": [
+        "Counting", "Calculus", "Proofs"
+      ],
+      "concepts_that_show_up": [
+        "Counting", "Calculus", "Proofs",  "Counting", "Calculus", "Proofs",  "Counting", "Calculus", "Proofs"
+      ],
       "notes": "Dummy review for layout testing. Short, plain-language note describing what a reader should expect from this review. Max 270 characters to preserve visual rhythm and avoid dense blocks."
     },
     {
@@ -83,34 +61,10 @@
         "math_depth": 4,
         "overall": 4
       },
-      "required_math_background": {
-        "counting": true,
-        "arithmetic": true,
-        "algebra": false,
-        "geometry": false,
-        "statistics_probability": false,
-        "proofs": false,
-        "trigonometry": false,
-        "calculus": false,
-        "data_representation": false,
-        "measurement_units": false,
-        "specialized_math": false,
-        "advanced_concepts": false
-      },
-      "concepts_that_show_up": {
-        "counting": true,
-        "arithmetic": true,
-        "algebra": false,
-        "geometry": false,
-        "statistics_probability": false,
-        "proofs": false,
-        "trigonometry": false,
-        "calculus": false,
-        "data_representation": true,
-        "measurement_units": true,
-        "specialized_math": false,
-        "advanced_concepts": false
-      },
+      "required_math_background": [],
+      "concepts_that_show_up": [
+        "Counting", "Calculus", "Proofs"
+      ],
       "notes": "A card-driven puzzle tracing prime-number routes; arithmetic emerges through constraints and tradeoffs. Math is visible yet approachable, with room for strategy and pattern discovery."
     },
 
@@ -138,34 +92,8 @@
         "math_depth": 3,
         "overall": 3
       },
-      "required_math_background": {
-        "counting": true,
-        "arithmetic": true,
-        "algebra": false,
-        "geometry": false,
-        "statistics_probability": false,
-        "proofs": false,
-        "trigonometry": false,
-        "calculus": false,
-        "data_representation": false,
-        "measurement_units": true,
-        "specialized_math": false,
-        "advanced_concepts": false
-      },
-      "concepts_that_show_up": {
-        "counting": true,
-        "arithmetic": true,
-        "algebra": false,
-        "geometry": false,
-        "statistics_probability": true,
-        "proofs": false,
-        "trigonometry": false,
-        "calculus": false,
-        "data_representation": true,
-        "measurement_units": true,
-        "specialized_math": false,
-        "advanced_concepts": false
-      },
+      "required_math_background": [ "Counting", "Calculus", "Proofs"],
+      "concepts_that_show_up": [],
       "notes": "Analyzes caper set-pieces through odds, branching plans, and failure trees. Probability talk stays informal while inviting back-of-the-envelope reasoning about risk, time, and resources."
     },
     {
@@ -192,34 +120,8 @@
         "math_depth": 3,
         "overall": 4
       },
-      "required_math_background": {
-        "counting": true,
-        "arithmetic": true,
-        "algebra": false,
-        "geometry": false,
-        "statistics_probability": false,
-        "proofs": false,
-        "trigonometry": false,
-        "calculus": false,
-        "data_representation": false,
-        "measurement_units": true,
-        "specialized_math": false,
-        "advanced_concepts": false
-      },
-      "concepts_that_show_up": {
-        "counting": true,
-        "arithmetic": true,
-        "algebra": false,
-        "geometry": false,
-        "statistics_probability": false,
-        "proofs": false,
-        "trigonometry": false,
-        "calculus": false,
-        "data_representation": true,
-        "measurement_units": true,
-        "specialized_math": false,
-        "advanced_concepts": false
-      },
+      "required_math_background": [],
+      "concepts_that_show_up": [],
       "notes": "Cuts, beats, and scene pacing framed as ratios and periodic structure. Viewers notice metrical regularity without formal theory, making rhythm math intuitive and transferable to music."
     },
 
@@ -247,34 +149,8 @@
         "math_depth": 3,
         "overall": 4
       },
-      "required_math_background": {
-        "counting": true,
-        "arithmetic": true,
-        "algebra": false,
-        "geometry": false,
-        "statistics_probability": false,
-        "proofs": false,
-        "trigonometry": false,
-        "calculus": false,
-        "data_representation": false,
-        "measurement_units": true,
-        "specialized_math": false,
-        "advanced_concepts": false
-      },
-      "concepts_that_show_up": {
-        "counting": true,
-        "arithmetic": true,
-        "algebra": false,
-        "geometry": true,
-        "statistics_probability": false,
-        "proofs": false,
-        "trigonometry": false,
-        "calculus": false,
-        "data_representation": false,
-        "measurement_units": true,
-        "specialized_math": false,
-        "advanced_concepts": false
-      },
+      "required_math_background": [],
+      "concepts_that_show_up": [ "Counting", "Calculus", "Proofs"],
       "notes": "Spiral growth introduces iteration, angle consistency, and measurement discipline. Geometry appears informally via turn counts and spacing rather than proofs."
     },
     {
@@ -301,34 +177,8 @@
         "math_depth": 3,
         "overall": 3
       },
-      "required_math_background": {
-        "counting": true,
-        "arithmetic": true,
-        "algebra": false,
-        "geometry": true,
-        "statistics_probability": false,
-        "proofs": false,
-        "trigonometry": false,
-        "calculus": false,
-        "data_representation": false,
-        "measurement_units": true,
-        "specialized_math": false,
-        "advanced_concepts": false
-      },
-      "concepts_that_show_up": {
-        "counting": true,
-        "arithmetic": true,
-        "algebra": false,
-        "geometry": true,
-        "statistics_probability": false,
-        "proofs": false,
-        "trigonometry": false,
-        "calculus": false,
-        "data_representation": false,
-        "measurement_units": true,
-        "specialized_math": false,
-        "advanced_concepts": false
-      },
+      "required_math_background": [],
+      "concepts_that_show_up": [ "Counting", "Calculus", "Proofs"],
       "notes": "Basic block drafting anchors measurements to geometry—seams, darts, and ease—translating body data into repeatable shapes. Formal vocabulary appears but remains light."
     },
 
@@ -356,34 +206,8 @@
         "math_depth": 3,
         "overall": 3
       },
-      "required_math_background": {
-        "counting": true,
-        "arithmetic": true,
-        "algebra": false,
-        "geometry": false,
-        "statistics_probability": false,
-        "proofs": false,
-        "trigonometry": false,
-        "calculus": false,
-        "data_representation": false,
-        "measurement_units": true,
-        "specialized_math": false,
-        "advanced_concepts": false
-      },
-      "concepts_that_show_up": {
-        "counting": true,
-        "arithmetic": true,
-        "algebra": false,
-        "geometry": false,
-        "statistics_probability": false,
-        "proofs": false,
-        "trigonometry": false,
-        "calculus": false,
-        "data_representation": false,
-        "measurement_units": true,
-        "specialized_math": false,
-        "advanced_concepts": false
-      },
+      "required_math_background": [],
+      "concepts_that_show_up": [ "Counting", "Calculus", "Proofs"],
       "notes": "Progressive counting drills cultivate stable meter and subdivision. Modular thinking shows up in repeatable units and practice patterns."
     },
     {
@@ -410,34 +234,8 @@
         "math_depth": 3,
         "overall": 3
       },
-      "required_math_background": {
-        "counting": true,
-        "arithmetic": true,
-        "algebra": false,
-        "geometry": false,
-        "statistics_probability": false,
-        "proofs": false,
-        "trigonometry": false,
-        "calculus": false,
-        "data_representation": false,
-        "measurement_units": false,
-        "specialized_math": false,
-        "advanced_concepts": false
-      },
-      "concepts_that_show_up": {
-        "counting": true,
-        "arithmetic": true,
-        "algebra": false,
-        "geometry": false,
-        "statistics_probability": false,
-        "proofs": false,
-        "trigonometry": false,
-        "calculus": false,
-        "data_representation": false,
-        "measurement_units": true,
-        "specialized_math": false,
-        "advanced_concepts": false
-      },
+      "required_math_background": [ "Counting", "Calculus", "Proofs"],
+      "concepts_that_show_up": [],
       "notes": "Functional harmony introduces pattern recognition and simple relationships between chords (I–V–vi–IV), with accessible ear training and transfer to songwriting."
     },
 
@@ -465,34 +263,8 @@
         "math_depth": 4,
         "overall": 4
       },
-      "required_math_background": {
-        "counting": true,
-        "arithmetic": false,
-        "algebra": false,
-        "geometry": true,
-        "statistics_probability": false,
-        "proofs": false,
-        "trigonometry": false,
-        "calculus": false,
-        "data_representation": false,
-        "measurement_units": true,
-        "specialized_math": false,
-        "advanced_concepts": false
-      },
-      "concepts_that_show_up": {
-        "counting": true,
-        "arithmetic": false,
-        "algebra": false,
-        "geometry": true,
-        "statistics_probability": false,
-        "proofs": false,
-        "trigonometry": false,
-        "calculus": false,
-        "data_representation": true,
-        "measurement_units": true,
-        "specialized_math": false,
-        "advanced_concepts": false
-      },
+      "required_math_background": [],
+      "concepts_that_show_up": [ "Counting", "Calculus", "Proofs"],
       "notes": "One- and two-point drills emphasize horizon, vanishing lines, and proportional scaling. Strong geometric intuition develops without heavy formalism."
     },
     {
@@ -519,34 +291,8 @@
         "math_depth": 4,
         "overall": 4
       },
-      "required_math_background": {
-        "counting": true,
-        "arithmetic": true,
-        "algebra": false,
-        "geometry": true,
-        "statistics_probability": false,
-        "proofs": false,
-        "trigonometry": false,
-        "calculus": false,
-        "data_representation": false,
-        "measurement_units": true,
-        "specialized_math": false,
-        "advanced_concepts": false
-      },
-      "concepts_that_show_up": {
-        "counting": true,
-        "arithmetic": true,
-        "algebra": false,
-        "geometry": true,
-        "statistics_probability": false,
-        "proofs": false,
-        "trigonometry": false,
-        "calculus": false,
-        "data_representation": true,
-        "measurement_units": true,
-        "specialized_math": false,
-        "advanced_concepts": false
-      },
+      "required_math_background": [ "Counting", "Calculus", "Proofs"],
+      "concepts_that_show_up":[],
       "notes": "Hands-on tiling activities surface symmetry, transformations, and repeat units. Formal vocabulary can be introduced, yet pattern play carries the learning."
     }
   ]

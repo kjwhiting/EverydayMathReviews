@@ -137,9 +137,18 @@
     var full = Math.min(5, Math.max(0, Math.floor(scoreOutOf5 + 0.5))); // .5 rounds up visually
     var html = "";
     for (var i = 0; i < 5; i++) {
-      html += starSvg(i < full ? "currentColor" : "rgba(255,255,255,0.25)");
+      html += starSvg(i < full ? "currentColor" : "rgba(187, 185, 187, 0.67)");
     }
     return html;
+  }
+
+  function renderTopics(topics) {
+    console.log(topics);
+    let items = "";
+    topics.forEach((t) => {
+      items += "<li key=" + t + ">" + t + "</li>";
+    });
+    return items;
   }
 
   // Build labeled list of subscores for a part
@@ -157,7 +166,7 @@
         "<li><strong>" +
         escapeHtml(label) +
         ":</strong> " +
-        Number(v).toFixed(1) +
+        Number(v).toFixed(0) +
         "</li>";
     }
     html += "</ul>";
@@ -186,8 +195,6 @@
 
       var overall = computeOverall(r, p1o, p2o, p3o);
       var overallRounded1 = roundHalfUp(overall, 1);
-      var overallBand = band(overall);
-      var overallStars = renderStars(overall);
 
       var detailsId = "details-" + idx;
 
@@ -198,38 +205,34 @@
         '<h3 class="review-title">' +
         escapeHtml(title) +
         "</h3>" +
+        '<div class="overall-number">' +
+        overallRounded1.toFixed(0) +
+        "/5" +
+        "</div>" +
+        "</header>" +
         '<div class="meta-row">' +
+        '<a class="review-link" href="' +
+        escapeAttr(link) +
+        '" target="_blank" rel="noopener">goto</a>' +
         '<span class="domain-pill domain-pill--sm">' +
         escapeHtml(domain) +
         "</span>" +
-        '<a class="review-link review-link--sm" href="' +
-        escapeAttr(link) +
-        '" target="_blank" rel="noopener">Open ↗</a>' +
         "</div>" +
-        "</header>" +
         '<div class="review-card-body">' +
-        '<div class="overall overall--block" aria-label="Overall rating">' +
-        '<div class="overall-number">' +
-        overallRounded1.toFixed(1) +
-        "</div>" +
-        '<div class="overall-stars" aria-hidden="true">' +
-        overallStars +
-        "</div>" +
-        '<div class="overall-band">' +
-        overallBand +
-        "</div>" +
-        "</div>" +
         '<dl class="sub-metrics-vert" aria-label="Part ratings">' +
         '<div class="metric-row"><dt>Informal</dt><dd>' +
-        p1o.toFixed(1) +
+        p1o.toFixed(0) +
         "</dd></div>" +
         '<div class="metric-row"><dt>Formal</dt><dd>' +
-        p2o.toFixed(1) +
+        p2o.toFixed(0) +
         "</dd></div>" +
         '<div class="metric-row"><dt>Transfer</dt><dd>' +
-        p3o.toFixed(1) +
+        p3o.toFixed(0) +
         "</dd></div>" +
         "</dl>" +
+        "<ul class='concepts'> " +
+        renderTopics(r.concepts_that_show_up) +
+        "</ul>" +
         '<button class="toggle-details" aria-expanded="false" aria-controls="' +
         detailsId +
         '">Expand details</button>' +
@@ -242,19 +245,19 @@
         "</div>" +
         '<div class="details-group">' +
         "<p><strong>Part I — Informal Mathematics</strong> (overall " +
-        p1o.toFixed(1) +
+        p1o.toFixed(0) +
         ")</p>" +
         formatSubscores("part_one_informal", p1) +
         "</div>" +
         '<div class="details-group">' +
         "<p><strong>Part II — Formal Mathematics</strong> (overall " +
-        p2o.toFixed(1) +
+        p2o.toFixed(0) +
         ")</p>" +
         formatSubscores("part_two_formal", p2) +
         "</div>" +
         '<div class="details-group">' +
         "<p><strong>Part III — Transferability</strong> (overall " +
-        p3o.toFixed(1) +
+        p3o.toFixed(0) +
         ")</p>" +
         formatSubscores("part_three_transferability", p3) +
         "</div>" +
